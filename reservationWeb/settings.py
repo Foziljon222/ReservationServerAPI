@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -80,12 +81,14 @@ WSGI_APPLICATION = 'reservationWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ReservationApi',
-        'USER': 'postgres',
-        'PASSWORD': '200908',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backend.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'ReservationApi',
+        # 'USER': 'postgres',
+        # 'PASSWORD': '200908',
+        # 'HOST': 'localhost',
+        # 'PORT': '5432',
     }
 }
 
